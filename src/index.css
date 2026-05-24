@@ -1,0 +1,318 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#navBar {
+    position: fixed;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px 8%;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+#logo {
+    color: #e3e69d;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin: 0;
+}
+.navbar-ul{
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+.navbar-ul li a {
+    text-decoration: none;
+    justify-content: space-around;
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.nav-them-btn {
+    background: rgba(255, 255, 255, 0.15);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 6px 14px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+.dark-them .nav-them-btn {
+    background: #333;
+    color: #fff;
+    border-color: #555;
+}
+
+.search-input{
+    width: 100%;
+    max-width: 250px;
+    padding: 6px 15px;
+    font-size: 0.9rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    outline: none;
+}
+.search-input :focus {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: #38ef7d;
+}
+.dark-them .search-input {
+    background: #222;
+    border-color: #444;
+}
+
+.navbar-ul li a::after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 0;
+    bottom: -5px;
+    left: 0;
+    background-color: #38ef7d;
+    transition: width 0.3s ease;
+}
+.navbar-ul li a:hover::after {
+    width: 100%;
+}
+@media (max-width: 700px) {
+    #navBar {
+        flex-direction: column;
+    }
+}
+
+.hero-section {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('./assets/photo1.jpg');
+    height: 70vh;
+    background-size: cover;
+    background-position:center;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    text-align: center;
+    position: relative;
+    justify-content: center;
+}
+.hero-section h1,
+.hero-section h2{
+    margin-top: 0;
+}
+#profile-card {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    display: flex;
+    gap: 5px;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #f0e2cc;
+}
+.profile-text {
+    text-align: center;
+    color: rgb(175, 102, 102);
+    font-size: 2rem;
+}
+
+#profile-card img{
+    border-radius: 50%;
+    width: 100%;
+    max-width: 250px;
+    height: 250px;
+    margin-left: 40px;
+}
+
+@media (max-width: 700px) {
+    .profile-card {
+        flex-direction: column;
+        font-size: small;
+    }
+}
+
+#about-section {
+    background: rgba(255, 255, 255, 0.13);
+    width: 100%;
+    height: 400px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content:space-around;   
+    gap: 550px;
+}
+.about-me {
+    position: absolute;
+    color: white;
+    background-color: #e3e69d;
+    padding: 10px;
+    margin-top: -31px;
+    border-radius: 20%;
+}
+.hobby-side {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 100px;
+    padding-top: 50px;
+}
+.hobby-title {
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-align: center;
+    background-color: #59948f;
+    padding: 20px ;
+    border-radius: 50px;
+    color: white;
+}
+.hobby-list {
+    display: flex;
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+    padding-top: 10px;
+}
+.hobby-circle {
+    background: #11998e;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+.text-side {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-right: 90px;
+}
+.goal-text {
+    color: #555;
+    line-height: 1.5;
+    border: 2px dashed #ccc;
+    max-width: 350px;
+    height: 230px;
+    padding: 20px;
+}
+.text-side-btn {
+    background-color: #0e87a5;
+    color: white;
+    border: none;
+    padding: 20px 40px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-align: center;
+    transition: background 0.2s;
+    margin: 15px;
+}
+.text-side-btn:hover {
+    background-color: #162447;
+}
+
+
+.project-box {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 20px;
+}
+
+.pro-title {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+
+.pro-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap; 
+}
+.pro-card {
+  flex: 1;
+  min-width: 250px;
+  max-width: 280px; 
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.featured-badge {
+  background-color: #ffd700;
+  padding: 2px 8px;
+  font-size: 11px;
+  font-weight: bold;
+  border-radius: 10px;
+}
+
+.pro-description {
+  color: #666;
+  font-size: 14px;
+  height: 60px;
+}
+
+.tech-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.tech-badge {
+  background-color: #eef2f3;
+  padding: 4px 8px;
+  font-size: 12px;
+  border-radius: 4px;
+}
+@media (max-width:700px){
+    .project-box {
+        justify-content: center;
+    }
+}
+
+
+.footer-box {
+    background: #555;
+    color: #e0e0e0;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 100px;
+    align-items: center;
+}
+.media a {
+    text-decoration: none;
+    color: white;
+    padding: 20px ;
+}
