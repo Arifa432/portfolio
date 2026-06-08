@@ -17,13 +17,7 @@ export default function Navbar(props){
                         <li><a href="">Project</a></li>
                         <li><a href="">Contact</a></li>
                     </ul>
-
-                    <div className="nav-them-box">
-                        <button className="nav-them-btn" onClick={() => props.setDarkMode(!props.darkMode)}>
-                            {props.darkMode ? "Light":"Dark"}
-                        </button>
-                    </div>
-                
+                                    
                 </div>
             </nav>
 

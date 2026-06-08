@@ -3,11 +3,15 @@ import './App.css'
 import Header from './components/Header'
 import Navbar from './components/Navbar'
 import Profile from './components/Profile'
-import myPhoto from './assets/images.jpg'
+import myPhoto from  './assets/images.jpg'
 import About from './components/About'
 import Projects from './components/Project'
 import Footer from './components/Footer'
 import './index.css';
+import ContactForm from "./components/ContactForm";
+import FeedbackWall from "./components/FeedbckWall";
+
+import Theme from "./components/Theme";
 
 
 function App() {
@@ -26,10 +30,12 @@ function App() {
         darkMode={setDarkMode}
         setDarkMode={setDarkMode} 
         search ={search} setSearch={setSearch}/>
-
+        <Theme/>
       <Header message ='Welcome to My Portfolio'/>
       </div>
-      
+        
+        
+
 
       <Profile image = {myPhoto}
         title = "Web Developer"
@@ -38,8 +44,10 @@ function App() {
 
         <About />
         <Projects />
+        <ContactForm/>
+        <FeedbackWall/>
         <Footer />
-
+        
     </div>
   )
 }
